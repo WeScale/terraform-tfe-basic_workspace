@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    tfe = "~> 0.15.0"
+    tfe = "~> 0.23.0"
   }
 }
 
