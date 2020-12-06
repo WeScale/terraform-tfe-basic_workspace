@@ -17,3 +17,15 @@ resource "tfe_workspace" "workspace" {
     oauth_token_id = var.oauth_token_id
   }
 }
+
+resource "tfe_variable" "variable" {
+  for_each = var.variables
+
+  key = each.key
+  value = each.value.value
+  description = each.value.description
+  category = each.value.category
+  workspace_id = tfe_workspace.workspace.id
+  hcl = each.value.hcl
+  sensitive = each.value.sensitive
+}
