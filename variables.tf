@@ -36,7 +36,6 @@ variable "variables" {
     description = string
     category = string
     hcl = bool
-    sensitive = bool
   }))
   description = "Map of variables to set on the workspace, see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable"
 }

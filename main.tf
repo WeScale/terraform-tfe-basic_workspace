@@ -27,5 +27,4 @@ resource "tfe_variable" "variable" {
   category = each.value.category
   workspace_id = tfe_workspace.workspace.id
   hcl = each.value.hcl
-  sensitive = each.value.sensitive
 }
