@@ -10,6 +10,7 @@ resource "tfe_workspace" "workspace" {
   terraform_version = var.terraform_version
   file_triggers_enabled = true
   queue_all_runs = true
+  auto_apply = var.auto_apply
 
   vcs_repo {
     identifier = var.vcs_repo_identifier

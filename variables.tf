@@ -8,6 +8,11 @@ variable "organization_id" {
   description = "ID of the organization hosting the workspace"
 }
 
+variable "auto_apply" {
+  type = bool
+  description = "If the workspace is set to auto_apply its runs"
+}
+
 variable "terraform_version" {
   type = string
   description = "Terraform version used by the workspace"
